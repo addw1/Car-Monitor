@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>实时定位</title>
+
+	<!-- 引入高德地图JS API -->
+	<script type="text/javascript">
+        window._AMapSecurityConfig = {
+            securityJsCode:'34d8465b6a993a98d84f675067169d1e',
+        }
+</script>
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=6bd1f5999f048da0a950e7e49afeea24"></script>
+<div id="map-container"></div>
+<script language="javascript" src="qrc:///qtwebchannel/qwebchannel.js"></script>
+<script language="javascript">
+	// 初始化地图对象
+	var map = new AMap.Map('map-container', {
+	  zoom: 15
+	});
+
+	// 定义小车图片
+	var carIcon = new AMap.Icon({
+		  size: new AMap.Size(52, 52),
+		  image: 'http://47.104.189.43/boy1.png',
+		  imageSize: new AMap.Size(40, 40)
+	});
+
+
+	// 初始化无人汽车的位置变量value
+	var value = [125.254607, 43.834637];
+	map.setCenter(value);
+	// 在地图中添加小车标记
+	var marker = new AMap.Marker({
+		 position: value,
+		  icon: carIcon,
+		  offset: new AMap.Pixel(-26, -13)
+	});
+	marker.setMap(map);
+
+	// 用polyline对象记录无人汽车行驶的轨迹
+	var lineArr = [];
+	lineArr.push(value);
+	var polyline = new AMap.Polyline({
+		  path: lineArr,
+		  strokeWeight: 5,
+		  strokeColor: '#ff0000'
+	});
+	polyline.setMap(map);
+	/*
+	// 可以通过下面代码不断更新无人汽车的位置和行驶轨迹
+	setInterval(function() {
+		  // 更新value的值为无人汽车的新位置
+		  value = [value[0] + 0.001, value[1] + 0.001];
+
+		  // 更新无人汽车标记的位置
+		  marker.setPosition(value);
+
+		  // 更新行驶轨迹
+		  lineArr.push(value);
+		  polyline.setPath(lineArr);
+		}, 1000);
+	*/
+
+	function upgrade(log, lat){
+		value = [log, lat];
+		marker.setPosition(value);
+		lineArr.push(value);
+		polyline.setPath(lineArr);
+	  };
+	// upgrade(127,45);
+
+
+	</script>
+	<style type="text/css">
+		html, body {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			font-family: 微软雅黑;
+		}
+
+		#map-container {
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+
+</head>
+<body>
+
+
+
+</body>
+</html>
