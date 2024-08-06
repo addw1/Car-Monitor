@@ -1,0 +1,47 @@
+<RCC>
+  <qresource prefix="carImg">
+    <file>carBackSp.png</file>
+    <file>carBackView.png</file>
+    <file>bubble-gum-lilac-board.png</file>
+    <file>carBackImg.png</file>
+    <file>carLight_topView.png</file>
+    <file>car2.png</file>
+  </qresource>
+  <qresource prefix="hardware">
+    <file>3dWheel.png</file>
+    <file>jetson.png</file>
+    <file>car2.png</file>
+    <file>3Dcamera.png</file>
+    <file>hardware.png</file>
+    <file>radar.png</file>
+  </qresource>
+  <qresource prefix="logPicture">
+    <file>icons8-sum-96.png</file>
+    <file>icons8-add-new-96.png</file>
+    <file>experimental-3d-cartoon-futuristic-building.png</file>
+    <file>experimental-3d-christmas-city-background.png</file>
+    <file>experimental-3d-fantasy-forest-background-2.png</file>
+    <file>experimental-3d-fantasy-night-forest-background.png</file>
+    <file>experimental-3d-winter-city-background-1.png</file>
+  </qresource>
+  <qresource prefix="weather">
+    <file>sun.png</file>
+    <file>winter.png</file>
+  </qresource>
+  <qresource prefix="icon">
+    <file>review.png</file>
+    <file>3dIcon.png</file>
+    <file>dashboardIcon.png</file>
+    <file>radarIcon.png</file>
+    <file>cameraIcon.png</file>
+    <file>connectIcon.png</file>
+    <file>logIcon.png</file>
+    <file>batteryIcon.png</file>
+    <file>CIcon.png</file>
+    <file>lightIcon.png</file>
+    <file>PIcon.png</file>
+    <file>carIcon.png</file>
+    <file>navigationIcon.png</file>
+    <file>ctrlIcon.png</file>
+  </qresource>
+</RCC>

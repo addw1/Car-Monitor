@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Frame</class>
+ <widget class="QFrame" name="Frame">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>513</width>
+    <height>511</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Frame</string>
+  </property>
+  <property name="frameShape">
+   <enum>QFrame::StyledPanel</enum>
+  </property>
+  <property name="frameShadow">
+   <enum>QFrame::Raised</enum>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>113</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	color: rgb(255, 255, 255);
+	background-color: rgba(0, 211, 106,100);
+	border:1px outset rgb(255, 255, 255);
+	border-radius:8px;
+  	text-align: center center;
+} 
+/*鼠标放在按钮上方*/
+QPushButton:hover {
+	background-color: rgba(0, 211, 106,80%);
+	border:2px outset rgba(36, 36, 36,0);
+} 
+QPushButton:pressed {
+	background-color: rgba(0, 211, 106,90%);
+	border:4px outset rgba(36, 36, 36,0);
+} </string>
+   </property>
+   <property name="text">
+    <string>轨迹回放</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>20</y>
+     <width>113</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	color: rgb(255, 255, 255);
+	background-color: rgba(255, 51, 153,125);
+	border:1px outset rgb(255, 255, 255);
+	border-radius:8px;
+  	text-align: center center;
+} 
+/*鼠标放在按钮上方*/
+QPushButton:hover {
+	background-color: rgba(255, 51, 153,80%);
+	border:2px outset rgba(36, 36, 36,0);
+} 
+QPushButton:pressed {
+	background-color: rgba(255, 51, 153,90%);
+	border:4px outset rgba(36, 36, 36,0);
+} </string>
+   </property>
+   <property name="text">
+    <string>视频回放</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>60</y>
+     <width>491</width>
+     <height>431</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:none;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>442</x>
+     <y>20</y>
+     <width>61</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	color: rgb(255, 255, 255);
+	background-color: rgba(0, 106, 211,100);
+	border:1px outset rgb(255, 255, 255);
+	border-radius:8px;
+  	text-align: center center;
+} 
+/*鼠标放在按钮上方*/
+QPushButton:hover {
+	background-color: rgba(0, 106, 211,80%);
+	border:2px outset rgba(36, 36, 36,0);
+} 
+QPushButton:pressed {
+	background-color: rgba(0, 106, 211,90%);
+	border:4px outset rgba(36, 36, 36,0);
+} </string>
+   </property>
+   <property name="text">
+    <string>load</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Frame</class>
+ <widget class="QFrame" name="Frame">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>491</width>
+    <height>431</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Frame</string>
+  </property>
+  <property name="frameShape">
+   <enum>QFrame::StyledPanel</enum>
+  </property>
+  <property name="frameShadow">
+   <enum>QFrame::Raised</enum>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>350</y>
+     <width>71</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	color: rgb(255, 255, 255);
+	background-color: rgba(0, 121, 136,100);
+	border:1px outset rgb(255, 255, 255);
+	border-radius:8px;
+  	text-align: center center;
+} 
+/*鼠标放在按钮上方*/
+QPushButton:hover {
+	background-color: rgba(0, 121, 136, 80%);
+	border:2px outset rgba(36, 36, 36,0);
+} 
+QPushButton:pressed {
+	background-color: rgba(0, 121, 136,90%);
+	border:4px outset rgba(36, 36, 36,0);
+} </string>
+   </property>
+   <property name="text">
+    <string>播放</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>350</y>
+     <width>71</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	color: rgb(255, 255, 255);
+	background-color: rgba(211, 105, 0,100);
+	border:1px outset rgb(255, 255, 255);
+	border-radius:8px;
+  	text-align: center center;
+} 
+/*鼠标放在按钮上方*/
+QPushButton:hover {
+	background-color: rgba(211, 105, 0,80%);
+	border:2px outset rgba(36, 36, 36,0);
+} 
+QPushButton:pressed {
+	background-color: rgba(211, 105, 0, 90%);
+	border:4px outset rgba(36, 36, 36,0);
+} </string>
+   </property>
+   <property name="text">
+    <string>暂停</string>
+   </property>
+  </widget>
+  <widget class="QSlider" name="horizontalSlider">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>320</y>
+     <width>441</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/*滑块整体样式*/
+QSlider {
+	background-color: rgba(255, 255, 255, 0);
+	border-radius: 8px;
+}
+/*还未滑过的地方*/
+QSlider::add-page:horizontal {
+	background-color: rgb(244, 244, 244);
+border-radius: 2px;
+}
+/*已经滑过的地方*/
+QSlider::sub-page:horizontal {
+}
+/*滑块沟槽部分*/
+QSlider::groove:horizontal {
+	background-color: rgb(93, 207, 239);
+	height: 6px;
+	border-radius: 2px;
+}
+/*滑块*/
+QSlider::handle:horizontal {
+	image: url(:/hardware/car2.png);
+	width: 35px;
+	height: 33px;
+	margin: -14px  0px -14px 0px;
+}
+
+</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QVideoWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>441</width>
+     <height>281</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:none;</string>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QVideoWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">PyQt5.QtMultimediaWidgets</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../qtQrc/picture.qrc"/>
+ </resources>
+ <connections/>
+</ui>
