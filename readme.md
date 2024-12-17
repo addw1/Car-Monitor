@@ -1,3 +1,3 @@
 # Remote Monitoring Software
 
-![show](.\show.png)
+![show](./show.png)
